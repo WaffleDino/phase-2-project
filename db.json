@@ -1,0 +1,37 @@
+{
+  "characterbio": [
+    {
+      "name": "example name",
+      "class": "example class",
+      "level": "example level",
+      "race": "example race",
+      "alignment": "example alignment",
+      "background": "example example example example example",
+      "experience": "10",
+      "player": "example example",
+      "id": 1
+    },
+    {
+      "name": "another example",
+      "class": "another example",
+      "level": "another example",
+      "race": "another example",
+      "alignment": "another example",
+      "background": "another example descriptive background",
+      "experience": "7",
+      "player": "another example",
+      "id": 2
+    },
+    {
+      "name": "Menya",
+      "class": "Barbarian",
+      "level": "7",
+      "race": "half-elf",
+      "alignment": "chaotic neutral",
+      "background": "not app",
+      "experience": "10",
+      "player": "gabby ganderson",
+      "id": 3
+    }
+  ]
+}
