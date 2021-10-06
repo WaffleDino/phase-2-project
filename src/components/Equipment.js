@@ -123,6 +123,9 @@ function Equipment () {
 
             </ul>
 
+            <button>Back</button>
+            <button>Next</button>
+
         </>
     ) 
 }

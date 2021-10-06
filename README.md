@@ -1,3 +1,20 @@
+# Lightweight D&D Character Sheet
+This app is for the user who's already made the bulk of their selections and is ready to put all of their character's info into a lightweight, minimalist character sheet. 
+
+This project was built in (with?) React.js with Hooks, something something dry and lightweight code. Idk yet, we'll have to flesh this out a bit more.  
+
+## Set up
+Once you've cd'ed into the project folder, run 'npm start' in one terminal shell tab. Since this program relies on the local database, open up another tab and run 'json-server --watch --port 4000 db.json' in the second one. 
+
+After both are running, you should be all set to start filling in your character info! 
+
+### Project Team
+Jesse Nelson
+Connor Hollins
+Abby Anderson
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

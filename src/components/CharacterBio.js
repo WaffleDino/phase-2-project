@@ -149,6 +149,9 @@ function CharacterBio () {
 
                     <input type="submit" />
             </FormStyling>
+
+            <button>Back</button>
+            <button>Next</button>
         </div>
     )
 }

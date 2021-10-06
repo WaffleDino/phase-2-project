@@ -3,7 +3,16 @@
 import React from "react";
 
 function Home () {
-    return <div>home</div>
+    return (
+    <>
+    <div>home</div>
+
+    <button>Next</button>
+    <button>Review saved character sheets</button>
+
+    </>
+    )
+
 }
 
 export default Home;
