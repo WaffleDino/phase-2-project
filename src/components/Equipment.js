@@ -6,7 +6,7 @@ import React, {useEffect, useState} from "react";
 
 function Equipment () {
     const [equipment, setEquipment] = useState ([])
-    const [chosenEquipment, setChosenEquipment] = useState([])
+    const [chosenEquipment, setChosenEquipment] = useState("")
     const [currency, setCurrency] =useState({
         gold: 0,
         silver: 0,
@@ -26,6 +26,10 @@ function Equipment () {
     const handleChange = (e) => {
         console.log('target name', e.target.name)
         console.log('target value', e.target.value)
+        // setChosenEquipment({
+        //     ...chosenEquipment, e.target.value 
+        // })
+        //* for some reason this e.target.value isn't working! idk why yet. but if you comment this whole setState out, then the site compiles. 
     }
 
     const handleCurrencyChange = (e) => {
@@ -91,11 +95,11 @@ function Equipment () {
     const renderOtherForm = () => {
         return (
             <form onSubmit={submitOtherItems}>
-                <label>Other items:</label>
+                <label>What else are you carrying?</label>
                 <textarea>
-                    
-                </textarea>
 
+                </textarea>
+            <input type="submit" />
 
 
             </form>
@@ -111,7 +115,7 @@ function Equipment () {
             <br />
             {renderCurrencyForm()}
             <br />
-            {/* {renderOtherForm()} */}
+            {renderOtherForm()}
             <br />
 
             <p>You've chosen to carry:</p>
