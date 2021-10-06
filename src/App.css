@@ -40,9 +40,16 @@
 
 .spell-dropdown {
   max-width: 250px;
+  margin: auto;
 }
 
 .spell-book {
+  margin: auto;
   margin-top: 50px;
   max-width: 250px;
+  text-align: center;
+}
+
+.spell-label {
+  text-align: center;
 }

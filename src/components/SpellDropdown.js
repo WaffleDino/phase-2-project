@@ -10,7 +10,7 @@ import Select from 'react-select'
 const SpellDropdown = ({options, onChange, label}) => {
     return(
         <div>
-            <h1>{label}</h1>
+            <h1 className="spell-label">{label}</h1>
             <div className="spell-dropdown"><Select options={options} onChange={onChange} /></div>
         </div>
     )
