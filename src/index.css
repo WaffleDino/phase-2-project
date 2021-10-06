@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#statForm {display: flex;
+flex-flow: column wrap;
+width: 100px;
+padding: 25px 25px;
+justify-content: space-between;
+}
