@@ -64,27 +64,6 @@ function CharacterBio () {
         })
     }, [])
 
-
-    const fetchDetails = (event) => {
-        const clickedClass = event.target.innerText.toLowerCase();
-        fetch(`https://www.dnd5eapi.co/api/classes/${clickedClass}`)
-        .then(response => response.json())
-        .then(data => {
-            console.log('chose class', data);
-            console.log('hit die', data.hit_die);
-            return (
-                <div>
-                    <p>{data.name}</p>
-                    <p>Hit die: {data.hit_die}</p>
-                </div>
-            )
-
-            
-
-        })
-
-    }
-
     const renderRaces = () => {
         if (!!races) {
             console.log(races)
