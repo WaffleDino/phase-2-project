@@ -7,6 +7,7 @@ import Equipment from "./Equipment";
 import Home from "./Home";
 import NavBar from './NavBar';
 import Spells from "./Spells";
+import CompletedSheet from "./CompletedSheet";
 
 
 function App() {
@@ -46,6 +47,10 @@ function App() {
 
         <Route exact path="/spells">
           <Spells />
+        </Route>
+
+        <Route exact path="/completedSheet">
+          <CompletedSheet />
         </Route>
 
         <Route exact path="/">

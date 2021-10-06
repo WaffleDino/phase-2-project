@@ -1,17 +1,17 @@
-//this is the top part of the character sheet, where you put in character name, class/level, race, background, alignment, player name, and experience points
-
 //also going to take in the info for personality traits, ideals, bonds, and flaws here. 
 
 //also features and traits, and other proficiencies and languages sections
 
 import React, {useEffect, useState} from "react";
 import styled from 'styled-components';
+import { NavLink } from "react-router-dom";
+
 
 function CharacterBio () {
     const [classes, setClasses] = useState([]) 
     const [races, setRaces] = useState([])
     const [chosenClass, setChosenClass] = useState([])
-    const [formData, setFormData] = useState({
+    const [characterFormData, setCharacterFormData] = useState({
         name: '',
         class: '',
         level: '',
@@ -23,22 +23,23 @@ function CharacterBio () {
     })
     
     const handleChange = (e) => {
-        setFormData({
-            ...formData,
+        setCharacterFormData({
+            ...characterFormData,
             [e.target.name]: e.target.value
         })
     }
 
     const submitCharBio = (e) => {
         e.preventDefault();
-        console.log(formData);
+        console.log(characterFormData);
 
+        
         fetch('http://localhost:4000/characterbio', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(formData)
+            body: JSON.stringify(characterFormData)
         })
         .then(response =>  response.json())
         .then(data => console.log(data))
@@ -111,11 +112,11 @@ function CharacterBio () {
 
             <FormStyling onSubmit={submitCharBio}>
                 <label> Character Name: 
-                    <input type="text" name="name" onChange={handleChange} value={formData.name} /> 
+                    <input type="text" name="name" onChange={handleChange} value={characterFormData.name} /> 
                 </label>
 
                 <label> Character Level: 
-                    <input type="text" name="level" onChange={handleChange} value={formData.level} /> 
+                    <input type="text" name="level" onChange={handleChange} value={characterFormData.level} /> 
                 </label>
 
                 {renderClasses()}
@@ -136,22 +137,28 @@ function CharacterBio () {
                 </select>   
 
                 <label> Character Background: 
-                    <input type="text" name="background" onChange={handleChange} value={formData.background} />
+                    <input type="text" name="background" onChange={handleChange} value={characterFormData.background} />
                 </label>
 
                 <label> Character Experience Points: 
-                    <input type="text" name="experience" onChange={handleChange} value={formData.experience} /> 
+                    <input type="text" name="experience" onChange={handleChange} value={characterFormData.experience} /> 
                 </label>
 
                 <label> Player Name: 
-                    <input type="text" name="player" onChange={handleChange} value={formData.player} /> 
+                    <input type="text" name="player" onChange={handleChange} value={characterFormData.player} /> 
                 </label>
 
                     <input type="submit" />
             </FormStyling>
 
-            <button>Back</button>
-            <button>Next</button>
+            {/* to home, like a back button  */}
+            <NavLink to="">
+                <button>Back</button>
+            </NavLink>
+            {/* to ability scores, like next button */}
+            <NavLink to="abilityScores">
+                <button>Next</button>
+            </NavLink>
         </div>
     )
 }

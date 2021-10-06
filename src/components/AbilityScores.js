@@ -4,6 +4,8 @@
 //probably will need to make child component for the next section, armor class/initiative/speed, all that stuff. 
 
 import React from "react";
+import { NavLink } from "react-router-dom";
+
 
 function AbilityScores () {
     console.log('ability scores')

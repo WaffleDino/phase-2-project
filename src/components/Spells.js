@@ -5,6 +5,8 @@
 //remember, will need to do another fetch with each spell url to get to the actual info about the individual spell
 
 import React, {useEffect} from "react";
+import { NavLink } from "react-router-dom";
+
 
 
 function Spells () {
