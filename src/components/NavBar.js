@@ -36,6 +36,12 @@ function NavBar() {
       >
         Spells
       </NavLink>
+
+      <NavLink
+      to="/completedSheet"
+      >
+        Completed Sheet
+      </NavLink>      
   
     </div>
     )
