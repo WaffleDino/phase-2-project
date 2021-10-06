@@ -10,6 +10,8 @@ import Home from "./Home";
 import NavBar from './NavBar';
 import React, {useState} from 'react';
 import SpellContainer from './SpellContainer';
+import CompletedSheet from "./CompletedSheet";
+
 
 
 function App() {
@@ -41,6 +43,10 @@ function App() {
 
         <Route exact path="/spells">
           <SpellContainer setSpells={setSpells} spells={spells} selectedSpells={selectedSpells} setSelectedSpells={setSelectedSpells} />
+        </Route>
+
+        <Route exact path="/completedSheet">
+          <CompletedSheet />
         </Route>
 
         <Route exact path="/">
