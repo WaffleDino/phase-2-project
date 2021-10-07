@@ -4,14 +4,14 @@ function Stats({statData, setStatData, handleStatChange}) {
 
 const handleStatSubmit = (event) => {
     event.preventDefault();
-    fetch("http://localhost:3000/abilityScores", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(statData)
-      })
-      .then(response => response.json())
+    // fetch("http://localhost:3000/abilityScores", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(statData)
+    //   })
+    //   .then(response => response.json())
      }
   
 
