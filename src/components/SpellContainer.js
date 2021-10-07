@@ -1,5 +1,6 @@
 import React, {useEffect} from "react";
 import SpellDropdown from "./SpellDropdown";
+import { NavLink } from "react-router-dom";
 
 
 
@@ -39,6 +40,14 @@ function SpellContainer ({setSpells, spells, selectedSpells, setSelectedSpells})
         <div>
             <SpellDropdown options={options} onChange={onChangeHandler} label="Select your spells" />
             <div id="spell-book" className="spell-book">{renderSelectedSpells()}</div>
+            <div>
+                <NavLink to="equipment">
+                    <button>Back</button>
+                </NavLink>
+                <NavLink to="completedsheet">
+                    <button>Next</button>
+                </NavLink>
+            </div>
         </div>
     );
 }
