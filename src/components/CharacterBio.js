@@ -19,6 +19,7 @@ function CharacterBio ({setCharacterInfo}) {
         alignment: '',
         background: '',
         experience: 0,
+        image: '',
         player: '',
     })
     
@@ -110,6 +111,7 @@ function CharacterBio ({setCharacterInfo}) {
 
     return (
         <div>
+            <h3>Character Bio</h3>
 
             <FormStyling onSubmit={submitCharBio}>
                 <label> Character Name: 
@@ -143,6 +145,10 @@ function CharacterBio ({setCharacterInfo}) {
 
                 <label> Character Experience Points: 
                     <input type="text" name="experience" onChange={handleChange} value={characterFormData.experience} /> 
+                </label>
+
+                <label> Character Image:
+                    <input type="text" name="image" onChange={handleChange} value={characterFormData.image} />
                 </label>
 
                 <label> Player Name: 
