@@ -11,6 +11,7 @@ import NavBar from './NavBar';
 import React, {useState} from 'react';
 import SpellContainer from './SpellContainer';
 import CompletedSheet from "./CompletedSheet";
+import SavedCharacters from './SavedCharacters';
 
 
 
@@ -55,6 +56,10 @@ function App() {
 
         <Route exact path="/">
           <Home />
+        </Route>
+
+        <Route exact path="/savedcharacters">
+          <SavedCharacters />
         </Route>
 
       </Switch>
