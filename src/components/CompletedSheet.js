@@ -1,22 +1,93 @@
-import React from "react";
+import React, {useState} from "react";
 import { NavLink } from "react-router-dom";
+
 
 
 function CompletedSheet ({characterInfo, finishedEquipment, selectedSpells, statData}) {
     //will have all the completed info from previous components passed through to here as props
 
     //will display all those props on the page here
+    const [completedCharacterSheet, setCompletedCharacterSheet] = useState({
+        name: '',
+        class: '',
+        level: '',
+        race: '',
+        alignment: '',
+        background: '',
+        experience: 0,
+        image: '',
+        player: '',
+        equipment: [],
+        gold: 0,
+        silver: 0,
+        copper: 0,
+        other: '',
+        str: '',
+        dex: '',
+        con: '',
+        int: '',
+        wis: '',
+        cha: '',
+        strmod: '',
+        dexmod: '',
+        conmod: '',
+        intmod: '',
+        wismod: '',
+        chamod: '',
+        spells: [],
+    })
 
     const saveCharacterSheet = () => {
-        //here's where we can POST the finalized character sheet to the db!
+        setCompletedCharacterSheet({
+            name: characterInfo.name,
+            class: characterInfo.class,
+            level: characterInfo.level,
+            race: characterInfo.race,
+            alignment: characterInfo.alignment,
+            background: characterInfo.background,
+            experience: characterInfo.experience,
+            image: characterInfo.image,
+            player: characterInfo.player,
+            equipment: [finishedEquipment.chosenEquipment],
+            gold: finishedEquipment.gold,
+            silver: finishedEquipment.silver,
+            copper: finishedEquipment.copper,
+            other: finishedEquipment.otherItems,
+            str: statData.str,
+            dex: statData.dex,
+            con: statData.con,
+            int: statData.int,
+            wis: statData.wis,
+            cha: statData.cha,
+            strmod: statData.strMod,
+            dexmod: statData.dexMod,
+            conmod: statData.conMod,
+            intmod: statData.intMod,
+            wismod: statData.wisMod,
+            chamod: statData.chaMod,
+            spells: [selectedSpells], 
+        })
+            fetch('http://localhost:3000/finishedCharacterSheet', {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(completedCharacterSheet)
+        })
+        .then(response =>  response.json())
+        .then(data => console.log(data))
     }
+
+
+
+
+
+
 
 return (
     <>
     <div>Completed Sheet </div>
-    {console.log('inside completed sheet', characterInfo)}
-    {console.log('inside completed sheet', finishedEquipment)}
-    {console.log('inside completed sheet', selectedSpells)}
+
     
 
 
@@ -83,8 +154,8 @@ return (
         <button>Back</button>
     </NavLink>
     <NavLink to="">          
-        <button onClick={saveCharacterSheet}>Save Character Sheet</button>
     </NavLink>
+    <button onClick={saveCharacterSheet}>Save Character Sheet</button>
     </>
 )
 
