@@ -60,3 +60,7 @@
   padding: 25px 25px;
   justify-content: space-between;
   }
+
+  .carousel-item {
+    max-width: 350px;
+  }
