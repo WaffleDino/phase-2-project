@@ -16,12 +16,16 @@ import CompletedSheet from "./CompletedSheet";
 
 function App() {
   const [selectedSpells, setSelectedSpells] = useState([])
-
-
+  
   const [spells, setSpells] = useState([{
     spell: "", 
   }])
- 
+  
+  //this state to save the completed characterbio info and send it down to the completed sheet
+  const [characterInfo, setCharacterInfo] = useState({})
+
+  //this state to save the completed equipment info and send it down to the completed sheet
+  const [finishedEquipment, setFinishedEquipment] = useState({})
 
 
   return (
@@ -30,7 +34,7 @@ function App() {
   <NavBar />
       <Switch>
         <Route exact path="/characterBio">
-          <CharacterBio />
+          <CharacterBio setCharacterInfo={setCharacterInfo} />
         </Route>
 
         <Route exact path="/abilityScores">
@@ -38,7 +42,7 @@ function App() {
         </Route>
 
         <Route exact path="/equipment">
-          <Equipment />
+          <Equipment setFinishedEquipment={setFinishedEquipment} />
         </Route>
 
         <Route exact path="/spells">
@@ -46,7 +50,7 @@ function App() {
         </Route>
 
         <Route exact path="/completedSheet">
-          <CompletedSheet />
+          <CompletedSheet characterInfo={characterInfo} finishedEquipment={finishedEquipment} />
         </Route>
 
         <Route exact path="/">

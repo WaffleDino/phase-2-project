@@ -5,14 +5,35 @@ import { NavLink } from "react-router-dom";
 
 
 function Home () {
+
+    const fetchSavedSheets = () => {
+        fetch('http://localhost:4000/characterbio')
+        .then(response => response.json())
+        .then(data => {
+            return (
+            data.map(each => {
+                return (
+                    <div>
+                    {console.log(each)}
+                    <p>{each.name}</p>
+                    {/* probably will need to make this a separate render function sadly */}
+                    </div>
+                )
+            })
+        )}
+        )
+    }
+                
+  
+
     return (
     <>
     <div>home</div>
 
         <NavLink to="characterBio">
-            <button>Next</button>
+            <button>Create new character sheet</button>
         </NavLink>
-    <button>Review saved character sheets</button>
+    <button onClick={fetchSavedSheets}>Review saved character sheets</button>
 
     </>
     )

@@ -23,15 +23,16 @@
       "id": 2
     },
     {
-      "name": "Menya",
-      "class": "Barbarian",
+      "name": "Tonkatsu",
+      "class": "Fighter",
       "level": "7",
-      "race": "half-elf",
-      "alignment": "chaotic neutral",
+      "race": "Elf",
+      "alignment": "lawful neutral",
       "background": "not app",
-      "experience": "10",
-      "player": "gabby ganderson",
+      "experience": "22",
+      "player": "abby anderson",
       "id": 3
     }
+
   ]
 }

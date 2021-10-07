@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import { NavLink } from "react-router-dom";
 
 
-function Equipment () {
+function Equipment ({setFinishedEquipment}) {
     const [equipment, setEquipment] = useState ([])
 
     const [equipmentFormData, setEquipmentFormData] = useState({
@@ -90,6 +90,7 @@ function Equipment () {
     const submitEquipment = (e) => {
         e.preventDefault();
         console.log(equipmentFormData);
+        setFinishedEquipment(equipmentFormData)
     }
 
     const renderChosenEquipment = () => {
