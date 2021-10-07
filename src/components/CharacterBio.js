@@ -36,15 +36,15 @@ function CharacterBio ({setCharacterInfo}) {
         setCharacterInfo(characterFormData)
         // ****** looks like we'll want to do the above for all components that are trying to pass info down to the completed sheet! make a state for the saved info inside of app, then in the component set that state at the very end when you're submitting. then in app, pass the prop set function down to the component and pass the prop state down to the completed sheet!
         
-        fetch('http://localhost:4000/characterbio', {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(characterFormData)
-        })
-        .then(response =>  response.json())
-        .then(data => console.log(data))
+        // fetch('http://localhost:4000/characterbio', {
+        //     method: "POST",
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify(characterFormData)
+        // })
+        // .then(response =>  response.json())
+        // .then(data => console.log(data))
     }
 
     //fetch to get list of classes from api, there are 12

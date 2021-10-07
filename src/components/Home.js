@@ -9,14 +9,14 @@ function Home () {
 
     const [savedSheets, setSavedSheets] = useState([]);
 
-    useEffect (() => {
-        fetch('http://localhost:4000/characterbio')
-        .then(response => response.json())
-        .then(data => {
-            console.log('inside home', data)
-            setSavedSheets(data)
-        }) 
-    }, []) //should make this go every time there's a toggle state change
+    // useEffect (() => {
+    //     fetch('http://localhost:4000/characterbio')
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         console.log('inside home', data)
+    //         setSavedSheets(data)
+    //     }) 
+    // }, []) //should make this go every time there's a toggle state change
     
     const renderSavedSheets = () => {
         //triggered on button click, should take the savedSheets state and render maybe the character name
@@ -73,8 +73,6 @@ function Home () {
     </div>
 
     </div>
-    
-    <button onClick={renderSavedSheets}>Review saved character sheets</button>
         <NavLink to="characterBio">
             <button>Create new character sheet</button>
         </NavLink>

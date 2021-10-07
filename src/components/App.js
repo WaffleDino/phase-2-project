@@ -17,6 +17,26 @@ import SavedCharacters from './SavedCharacters';
 
 function App() {
   const [selectedSpells, setSelectedSpells] = useState([])
+
+  const [statData, setStatData] = useState({
+    str:'',
+    strMod:'',
+    dex:'',
+    dexMod:'',
+    con:'',
+    conMod:'',
+    int:'',
+    intMod:'',
+    wis:'',
+    widMod:'',
+    cha:'',
+    ChaMod:''
+})
+
+
+
+
+
   
   const [spells, setSpells] = useState([{
     spell: "", 
@@ -32,14 +52,14 @@ function App() {
   return (
     <>
   <div>
-  <NavBar />
+  {/* <NavBar /> */}
       <Switch>
         <Route exact path="/characterBio">
           <CharacterBio setCharacterInfo={setCharacterInfo} />
         </Route>
 
         <Route exact path="/abilityScores">
-          <AbilityScores />
+          <AbilityScores statData={statData} setStatData={setStatData}/>
         </Route>
 
         <Route exact path="/equipment">
@@ -51,7 +71,7 @@ function App() {
         </Route>
 
         <Route exact path="/completedSheet">
-          <CompletedSheet characterInfo={characterInfo} finishedEquipment={finishedEquipment} selectedSpells={selectedSpells} />
+          <CompletedSheet statData={statData} characterInfo={characterInfo} finishedEquipment={finishedEquipment} selectedSpells={selectedSpells} />
         </Route>
 
         <Route exact path="/">
