@@ -72,7 +72,9 @@ function Home () {
         <NavLink to="characterBio">
             <button>Create new character sheet</button>
         </NavLink>
-    <button onClick={renderSavedSheets}>Review saved character sheets</button>
+        <NavLink  to="savedcharacters">
+            <button onClick={renderSavedSheets}>Review saved character sheets</button>
+        </NavLink>
 
     </>
     )

@@ -41,6 +41,10 @@ function NavBar() {
       to="/completedSheet"
       >
         Completed Sheet
+      </NavLink>
+
+      <NavLink  to="savedcharacters">
+        Saved characters
       </NavLink>      
   
     </div>
