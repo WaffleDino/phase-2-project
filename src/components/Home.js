@@ -79,6 +79,11 @@ function Home () {
             <button>Create new character sheet</button>
         </NavLink>
 
+        <NavLink  to="savedcharacters">
+            <button onClick={renderSavedSheets}>Review saved character sheets</button>
+        </NavLink>
+
+
     </>
     )
 

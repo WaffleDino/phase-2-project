@@ -27,25 +27,31 @@ fetch('https://www.dnd5eapi.co/api/skills')
 }, [])
 
 
-const renderSkills = () => {
-   if (!!skills) {
-    console.log(skills)
-    return skills.map(eachSkill => {
-        return (
-            <ul>
-            <li>{eachSkill.name}: {statData.str}</li>
-            </ul>
-            )
-    })}
-}
-const [statMod, setStatMod] = useState({
-    str:'',
-    dex:'',
-    con:'',
-    int:'',
-    wis:'',
-    cha:''
-})
+// const renderSkills = () => {
+//    if (!!skills) {
+//     console.log(skills)
+//     return skills.map(eachSkill => {
+//         return (
+//             <ul>
+//             <li>{eachSkill.name}: {statData.strMod}</li>
+//             </ul>
+//             )
+//     })}
+// }
+// const [statMod, setStatMod] = useState({
+//     str:'',
+//     strMod:'',
+//     dex:'',
+//     dexMod:'',
+//     con:'',
+//     conMod:'',
+//     int:'',
+//     intMod:'',
+//     wis:'',
+//     widMod:'',
+//     cha:'',
+//     ChaMod:''
+// })
 
 
 
@@ -53,54 +59,54 @@ const [statMod, setStatMod] = useState({
 
 
 // const renderSavingThrowStr = () => {
-//    if(!!statData.str) {
-//     if (statData.str == 1){
-//     return (<div>
-//         Strength: -5
-//     </div>)
-//     } else if (statData.str == 2 || statData.str == 3) {
-//     return (<div>
-//         Strength: -4
-//     </div>)
-//     }else if (statData.str == 4 || statData.str == 5) {
-//         return (<div>
-//             Strength: -3
-//         </div>)
-//     }else if (statData.str == 6 || statData.str == 7) {
-//         return (<div>
-//             Strength: -2
-//         </div>)
-//     }else if (statData.str == 8 || statData.str == 9) {
-//         return (<div>
-//             Strength: -1
-//         </div>)
-//     }else if (statData.str == 10 || statData.str == 11) {
-//         return (<div>
-//             Strength: 0
-//         </div>)
-//     }else if (statData.str == 12 || statData.str == 13) {
-//         return (<div>
-//             Strength: +1
-//         </div>)
-//     }else if (statData.str == 14 || statData.str == 15) {
-//         return (<div>
-//             Strength: +2
-//         </div>)
-//     }else if (statData.str == 16 || statData.str == 17) {
-//         return (<div>
-//             Strength: +3
-//         </div>)
-//     }else if (statData.str == 18 || statData.str == 19) {
-//         return (<div>
-//             Strength: +4
-//         </div>)
-//     }else {
-//         return (<div>
-//             Strength: +5
-//         </div>)
-//     }
-// } 
-// }
+//     if(!!statData.str) {
+//      if (statData.str == 1){
+//      return (
+//          "-5"
+//      )
+//      } else if (statData.str == 2 || statData.str == 3) {
+//      return (
+//          "-4"
+//      )
+//      }else if (statData.str == 4 || statData.str == 5) {
+//          return (
+//              "-3"
+//          )
+//      }else if (statData.str == 6 || statData.str == 7) {
+//          return (
+//              "-2"
+//          )
+//      }else if (statData.str == 8 || statData.str == 9) {
+//          return (
+//              "-1"
+//          )
+//      }else if (statData.str == 10 || statData.str == 11) {
+//          return (
+//              "0"
+//          )
+//      }else if (statData.str == 12 || statData.str == 13) {
+//          return (
+//              "+1"
+//          )
+//      }else if (statData.str == 14 || statData.str == 15) {
+//          return (
+//              "+2"
+//          )
+//      }else if (statData.str == 16 || statData.str == 17) {
+//          return (
+//              "+3"
+//          )
+//      }else if (statData.str == 18 || statData.str == 19) {
+//          return (
+//              "+4"
+//          )
+//      }else {
+//          return (
+//              "+5"
+//          )
+//      }
+//  } 
+//  }
 
 // const renderSavingThrowDex = () => {
 // if(!!statData.dex) {
@@ -354,11 +360,17 @@ const [statMod, setStatMod] = useState({
 
 const [statData, setStatData] = useState({
     str:'',
+    strMod:'',
     dex:'',
+    dexMod:'',
     con:'',
+    conMod:'',
     int:'',
+    intMod:'',
     wis:'',
-    cha:''
+    widMod:'',
+    cha:'',
+    ChaMod:''
 })
 
 const handleStatChange = (e) => {
@@ -368,12 +380,15 @@ const handleStatChange = (e) => {
     })
 }
 
+   
+
    return <div>
         <h1>ability scores</h1>
+        
         <Stats statData={statData} handleStatChange={handleStatChange}/>
-        <Modifiers   statData={statData}/>
+        {/* <Modifiers   statData={statData} statMod={statMod} setStatMod={setStatMod} handleModChange={handleModChange} /> */}
         <form id="skillsForm">
-            {renderSkills()}
+            {/* {renderSkills()} */}
         </form>
 
         <div>
