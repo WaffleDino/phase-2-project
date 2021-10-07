@@ -53,3 +53,10 @@
 .spell-label {
   text-align: center;
 }
+
+#statForm {display: flex;
+  flex-flow: column wrap;
+  width: 100px;
+  padding: 25px 25px;
+  justify-content: space-between;
+  }
