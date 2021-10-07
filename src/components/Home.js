@@ -21,12 +21,16 @@ function Home () {
     const renderSavedSheets = () => {
         //triggered on button click, should take the savedSheets state and render maybe the character name
         console.log(savedSheets)
+        return (
+
+            savedSheets.map(each => console.log(each))
+        )
     }
 
 
     return (
     <>
-    <div>HOME</div>
+    <div><h1>HOME</h1></div>
 
 
 

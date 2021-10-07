@@ -50,7 +50,7 @@ function App() {
         </Route>
 
         <Route exact path="/completedSheet">
-          <CompletedSheet characterInfo={characterInfo} finishedEquipment={finishedEquipment} />
+          <CompletedSheet characterInfo={characterInfo} finishedEquipment={finishedEquipment} selectedSpells={selectedSpells} />
         </Route>
 
         <Route exact path="/">
