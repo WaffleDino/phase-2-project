@@ -375,7 +375,16 @@ const handleStatChange = (e) => {
         <form id="skillsForm">
             {renderSkills()}
         </form>
-      
+
+        <div>
+            <NavLink to="characterbio">
+                <button>Back</button>
+            </NavLink>
+            <NavLink to="equipment">
+                <button>Next</button>
+            </NavLink>
+        </div>
+
         </div>
 
 }

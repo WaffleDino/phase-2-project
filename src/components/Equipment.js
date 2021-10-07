@@ -126,8 +126,12 @@ function Equipment ({setFinishedEquipment}) {
 
             </ul>
 
-            <button>Back</button>
-            <button>Next</button>
+            <NavLink to="abilityscores">
+                <button>Back</button>
+            </NavLink>
+            <NavLink to="spells">
+                <button>Next</button>
+            </NavLink>
 
         </>
     ) 
