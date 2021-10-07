@@ -26,14 +26,39 @@ function Home () {
 
     return (
     <>
-    <div>home</div>
+    <div>HOME</div>
+
+
+
+    <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://www.gameoutonline.com/wp-content/uploads/2020/12/dnd-bard-elf.png" class="d-block w-100" alt="bard image"/>
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.playandground.gg/wp-content/uploads/2020/09/Daco_5630804.png" class="d-block w-100" alt="warlock image"/>
+            </div>
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/originals/8e/c0/ce/8ec0cee6c2f4ab19b0b7679ecde05a13.png" class="d-block w-100" alt="druid image"/>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
 
 
 
     <div className="row">
 
     <div className="col-xs-12">
-        <img className="img-fluid"src="https://via.placeholder.com/1000"/>
     </div>
 
     <div className="col-sm-12 col-md-6">
@@ -51,3 +76,4 @@ function Home () {
 }
 
 export default Home;
+
