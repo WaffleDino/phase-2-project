@@ -22,17 +22,7 @@
       "player": "another example",
       "id": 2
     },
-    {
-      "name": "Tonkatsu",
-      "class": "Fighter",
-      "level": "7",
-      "race": "Elf",
-      "alignment": "lawful neutral",
-      "background": "not app",
-      "experience": "22",
-      "player": "abby anderson",
-      "id": 3
-    }
+
 
   ]
 }

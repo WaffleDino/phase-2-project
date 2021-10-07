@@ -34,16 +34,16 @@ function Home () {
 
 
 
-    <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleControls" className="carousel slide carousel-dark" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://www.gameoutonline.com/wp-content/uploads/2020/12/dnd-bard-elf.png" class="d-block w-100" alt="bard image"/>
+                <img src="https://www.gameoutonline.com/wp-content/uploads/2020/12/dnd-bard-elf.png" class="d-block" alt="bard image"/>
             </div>
             <div class="carousel-item">
-                <img src="https://www.playandground.gg/wp-content/uploads/2020/09/Daco_5630804.png" class="d-block w-100" alt="warlock image"/>
+                <img src="https://www.playandground.gg/wp-content/uploads/2020/09/Daco_5630804.png" class="d-block" alt="warlock image"/>
             </div>
             <div class="carousel-item">
-                <img src="https://i.pinimg.com/originals/8e/c0/ce/8ec0cee6c2f4ab19b0b7679ecde05a13.png" class="d-block w-100" alt="druid image"/>
+                <img src="https://i.pinimg.com/originals/8e/c0/ce/8ec0cee6c2f4ab19b0b7679ecde05a13.png" class="d-block" alt="druid image"/>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -62,19 +62,27 @@ function Home () {
 
     <div className="row">
 
-    <div className="col-xs-12">
+    <div className="col">
     </div>
 
-    <div className="col-sm-12 col-md-6">
+    <div className="col-xs-12 col-md-6">
         <p>Are you looking for a lightweight, minimalist character sheet? Welcome to your new favorite app. Just fill in your character's info in the following pages and enjoy the result. </p>
     </div>
+
+    <div className="col">
     </div>
+
+    </div>
+    
+    <button onClick={renderSavedSheets}>Review saved character sheets</button>
         <NavLink to="characterBio">
             <button>Create new character sheet</button>
         </NavLink>
+
         <NavLink  to="savedcharacters">
             <button onClick={renderSavedSheets}>Review saved character sheets</button>
         </NavLink>
+
 
     </>
     )

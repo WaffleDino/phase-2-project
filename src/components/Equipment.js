@@ -101,7 +101,8 @@ function Equipment ({setFinishedEquipment}) {
 
     return (
         <>
-            <p>equipment</p>
+            <h3>Equipment</h3>
+
             <form onSubmit={submitEquipment}>
                 {renderEquipment()}
                 <br/><br/>
@@ -125,13 +126,15 @@ function Equipment ({setFinishedEquipment}) {
                 <div>{equipmentFormData.otherItems}</div>
 
             </ul>
-
+            
+        <ul className="pagination">
             <NavLink to="abilityscores">
                 <button>Back</button>
             </NavLink>
             <NavLink to="spells">
                 <button>Next</button>
             </NavLink>
+        </ul>
 
         </>
     ) 
