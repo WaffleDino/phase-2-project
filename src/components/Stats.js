@@ -43,22 +43,22 @@ const handleStatSubmit = (event) => {
            <br></br>
        </label>
         <label>  STR Modifier:
-            <input type="number" min="1" max="21"name="strMod" placeholder="1" onChange={handleStatChange} value={statData.strMod}/>
+            <input type="number" min="-8" max="8"name="strMod" placeholder="1" onChange={handleStatChange} value={statData.strMod}/>
         </label>
         <label> DEX Modifier:
-            <input type="number" min="1" max="21"name="dexMod" placeholder="1" onChange={handleStatChange} value={statData.dexMod} />
+            <input type="number" min="-8" max="8"name="dexMod" placeholder="1" onChange={handleStatChange} value={statData.dexMod} />
         </label>
         <label> CON Modifier:
-            <input type="number" min="1" max="21"name="conMod" placeholder="1" onChange={handleStatChange} value={statData.conMod} />
+            <input type="number" min="-8" max="8"name="conMod" placeholder="1" onChange={handleStatChange} value={statData.conMod} />
         </label>
         <label> INT Modifier:
-            <input type="number" min="1" max="21"name="intMod" placeholder="1" onChange={handleStatChange} value={statData.intMod} />
+            <input type="number" min="-8" max="8"name="intMod" placeholder="1" onChange={handleStatChange} value={statData.intMod} />
         </label>
         <label> WIS Modifier:
-            <input type="number" min="1" max="21"name="wisMod" placeholder="1" onChange={handleStatChange} value={statData.wisMod} />
+            <input type="number" min="-8" max="8"name="wisMod" placeholder="1" onChange={handleStatChange} value={statData.wisMod} />
         </label>
         <label> CHA Modifier:
-            <input type="number" min="1" max="21"name="chaMod" placeholder="1" onChange={handleStatChange} value={statData.chaMod} />
+            <input type="number" min="-8" max="8"name="chaMod" placeholder="1" onChange={handleStatChange} value={statData.chaMod} />
         </label>
 
         <input type="submit" value="Confirm Stats"/>

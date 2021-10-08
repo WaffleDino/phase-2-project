@@ -140,6 +140,27 @@ return (
    
 
     <div className="skillsdiv">
+        <h1>Skills and Modifiers</h1>
+        <ul>
+            <li>Acrobatics: {statData.dexMod}</li>
+            <li>Animal Handling: {statData.wisMod}</li>
+            <li>Arcana: {statData.intMod}</li>
+            <li>Athletics: {statData.strMod}</li>
+            <li>Deception:{statData.chaMod} </li>
+            <li>History: {statData.intMod}</li>
+            <li>Insight: {statData.wisMod}</li>
+            <li>Intimidation: {statData.chaMod}</li>
+            <li>Investigation: {statData.intMod}</li>
+            <li>Medicine: {statData.wisMod}</li>
+            <li>Nature: {statData.intMod}</li>
+            <li>Perception: {statData.wisMod}</li>
+            <li>Performance: {statData.chaMod}</li>
+            <li>Persuasion: {statData.chaMod}</li>
+            <li>Religion: {statData.intMod}</li>
+            <li>Slight of Hand: {statData.dexMod}</li>
+            <li>Stealth: {statData.dexMod}</li>
+            <li>Survival: {statData.wisMod}</li>
+        </ul>
 
     </div>
 
