@@ -35,11 +35,9 @@
       "image": "hhhh",
       "player": "connor ",
       "equipment": [
-        [
-          "Abacus",
-          "Alms box",
-          "Backpack"
-        ]
+        "Abacus",
+        "Alms box",
+        "Backpack"
       ],
       "gold": "1",
       "silver": "1",
@@ -58,22 +56,104 @@
       "wismod": "1",
       "chamod": "1",
       "spells": [
-        [
-          {
-            "value": "Acid Arrow",
-            "label": "Acid Arrow"
-          },
-          {
-            "value": "Aid",
-            "label": "Aid"
-          },
-          {
-            "value": "Antilife Shell",
-            "label": "Antilife Shell"
-          }
-        ]
+        {
+          "value": "Acid Arrow",
+          "label": "Acid Arrow"
+        },
+        {
+          "value": "Aid",
+          "label": "Aid"
+        },
+        {
+          "value": "Antilife Shell",
+          "label": "Antilife Shell"
+        }
       ],
       "id": 3
+    },
+    {
+      "name": "orc man 2",
+      "class": "Barbarian",
+      "level": "0",
+      "race": "Dwarf",
+      "alignment": "neutral good",
+      "background": "1",
+      "experience": "01",
+      "image": "https://static.wikia.nocookie.net/wowwiki/images/1/1e/3D-Orc.png/revision/latest/top-crop/width/360/height/450?cb=20090804213114",
+      "player": "connor ",
+      "equipment": [
+        "Acid (vial)",
+        "Dice Set",
+        "Crowbar"
+      ],
+      "gold": "2",
+      "silver": "2",
+      "copper": "2",
+      "other": "more rope",
+      "str": "2",
+      "dex": "2",
+      "con": "2",
+      "int": "2",
+      "wis": "2",
+      "cha": "2",
+      "strmod": "2",
+      "dexmod": "2",
+      "conmod": "2",
+      "intmod": "2",
+      "wismod": "2",
+      "chamod": "2",
+      "spells": [
+        {
+          "value": "Calm Emotions",
+          "label": "Calm Emotions"
+        },
+        {
+          "value": "Clone",
+          "label": "Clone"
+        },
+        {
+          "value": "Branding Smite",
+          "label": "Branding Smite"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "name": "orc man3",
+      "class": "",
+      "level": "",
+      "race": "",
+      "alignment": "",
+      "background": "",
+      "experience": 0,
+      "image": "https://via.placeholder.com/300/09f/fff.png",
+      "player": "",
+      "equipment": [
+        "Acid (vial)"
+      ],
+      "gold": "3",
+      "silver": "3",
+      "copper": "3",
+      "other": "2222",
+      "str": "3",
+      "dex": "3",
+      "con": "3",
+      "int": "3",
+      "wis": "3",
+      "cha": "3",
+      "strmod": "3",
+      "dexmod": "3",
+      "conmod": "3",
+      "intmod": "3",
+      "wismod": "3",
+      "chamod": "3",
+      "spells": [
+        {
+          "value": "Aid",
+          "label": "Aid"
+        }
+      ],
+      "id": 5
     }
   ]
 }

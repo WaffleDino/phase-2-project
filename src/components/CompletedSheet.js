@@ -48,7 +48,7 @@ function CompletedSheet ({characterInfo, finishedEquipment, selectedSpells, stat
             experience: characterInfo.experience,
             image: characterInfo.image,
             player: characterInfo.player,
-            equipment: [finishedEquipment.chosenEquipment],
+            equipment: finishedEquipment.chosenEquipment,
             gold: finishedEquipment.gold,
             silver: finishedEquipment.silver,
             copper: finishedEquipment.copper,
@@ -65,7 +65,7 @@ function CompletedSheet ({characterInfo, finishedEquipment, selectedSpells, stat
             intmod: statData.intMod,
             wismod: statData.wisMod,
             chamod: statData.chaMod,
-            spells: [selectedSpells], 
+            spells: selectedSpells, 
         }
         
         
