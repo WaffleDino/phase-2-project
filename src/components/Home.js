@@ -5,7 +5,8 @@ import { NavLink } from "react-router-dom";
 
 
 
-function Home () {
+
+function Home ({tiefling}) {
 
     const [savedSheets, setSavedSheets] = useState([]);
 
@@ -36,8 +37,11 @@ function Home () {
 
     <div id="carouselExampleControls" className="carousel slide carousel-dark" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
+        <div class="carousel-item active">
                 <img src="https://www.gameoutonline.com/wp-content/uploads/2020/12/dnd-bard-elf.png" class="d-block" alt="bard image"/>
+            </div>
+            <div class="carousel-item">
+                <img src={tiefling} class="d-block" alt="bard image"/>
             </div>
             <div class="carousel-item">
                 <img src="https://www.playandground.gg/wp-content/uploads/2020/09/Daco_5630804.png" class="d-block" alt="warlock image"/>

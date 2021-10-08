@@ -12,6 +12,8 @@ import React, {useState} from 'react';
 import SpellContainer from './SpellContainer';
 import CompletedSheet from "./CompletedSheet";
 import SavedCharacters from './SavedCharacters';
+import background from "../images/bg.jpg";
+import tiefling from "../images/tiefling-player-character.png"
 
 
 
@@ -51,7 +53,13 @@ function App() {
 
   return (
     <>
-  <div>
+  {/* <div style={{  
+  backgroundImage: `url(${background})`,
+  backgroundPosition: 'center',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat'
+}}> */}
+<div>
   {/* <NavBar /> */}
       <Switch>
         <Route exact path="/characterBio">
@@ -75,7 +83,7 @@ function App() {
         </Route>
 
         <Route exact path="/">
-          <Home />
+          <Home tiefling={tiefling} background={background}/>
         </Route>
 
         <Route exact path="/savedcharacters">
