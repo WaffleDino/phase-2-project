@@ -50,13 +50,34 @@ function SavedCharacters() {
                                     </ul>
                                     <li><h3>Stats</h3></li>
                                     <ul>
-                                    <li>Strength: {each.str} | Saving Throw: {each.strMod}</li> 
-                                    <li>Dexterity: {each.dex} | Saving Throw: {each.dexMod}</li>
-                                    <li>Constitution: {each.con} | Saving Throw: {each.conMod}</li>
-                                    <li>Intelligence: {each.int} | Saving Throw: {each.intMod}</li>
-                                    <li>Wisdom: {each.wis} | Saving Throw: {each.wisMod}</li>
-                                    <li>Charisma: {each.cha} | Saving Throw: {each.chaMod}</li>
+                                    <li>Strength: {each.str} | Saving Throw: {each.strmod}</li> 
+                                    <li>Dexterity: {each.dex} | Saving Throw: {each.dexmod}</li>
+                                    <li>Constitution: {each.con} | Saving Throw: {each.conmod}</li>
+                                    <li>Intelligence: {each.int} | Saving Throw: {each.intmod}</li>
+                                    <li>Wisdom: {each.wis} | Saving Throw: {each.wismod}</li>
+                                    <li>Charisma: {each.cha} | Saving Throw: {each.chamod}</li>
                                     </ul>
+                                    <li><h3>Abilities</h3></li>
+                                    <ul>
+                                    <li>Acrobatics: {each.dexmod}</li>
+                                    <li>Animal Handling: {each.wismod}</li>
+                                    <li>Arcana: {each.intmod}</li>
+                                    <li>Athletics: {each.strmod}</li>
+                                    <li>Deception:{each.chamod} </li>
+                                    <li>History: {each.intmod}</li>
+                                    <li>Insight: {each.wismod}</li>
+                                    <li>Intimidation: {each.chamod}</li>
+                                    <li>Investigation: {each.intmod}</li>
+                                    <li>Medicine: {each.wismod}</li>
+                                    <li>Nature: {each.intmod}</li>
+                                    <li>Perception: {each.wismod}</li>
+                                    <li>Performance: {each.chamod}</li>
+                                    <li>Persuasion: {each.chamod}</li>
+                                    <li>Religion: {each.intmod}</li>
+                                    <li>Slight of Hand: {each.dexmod}</li>
+                                    <li>Stealth: {each.dexmod}</li>
+                                    <li>Survival: {each.wismod}</li>
+                                     </ul>   
                                     <li><h3>Spells</h3></li>
                                     <ul>
                                     {each.spells.map(each => <li>{(each.value)}</li>)}
