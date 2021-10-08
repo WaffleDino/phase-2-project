@@ -38,7 +38,7 @@ function CompletedSheet ({characterInfo, finishedEquipment, selectedSpells, stat
     })
 
     const saveCharacterSheet = () => {
-        setCompletedCharacterSheet({
+        const characterSheet = {
             name: characterInfo.name,
             class: characterInfo.class,
             level: characterInfo.level,
@@ -48,7 +48,7 @@ function CompletedSheet ({characterInfo, finishedEquipment, selectedSpells, stat
             experience: characterInfo.experience,
             image: characterInfo.image,
             player: characterInfo.player,
-            equipment: [finishedEquipment.chosenEquipment],
+            equipment: finishedEquipment.chosenEquipment,
             gold: finishedEquipment.gold,
             silver: finishedEquipment.silver,
             copper: finishedEquipment.copper,
@@ -65,18 +65,26 @@ function CompletedSheet ({characterInfo, finishedEquipment, selectedSpells, stat
             intmod: statData.intMod,
             wismod: statData.wisMod,
             chamod: statData.chaMod,
-            spells: [selectedSpells], 
-        })
-            fetch('http://localhost:3000/finishedCharacterSheet', {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(completedCharacterSheet)
-        })
-        .then(response =>  response.json())
-        .then(data => console.log(data))
+            spells: selectedSpells, 
+        }
+        
+        
+        
+        setCompletedCharacterSheet(characterSheet)
+        fetchPost(characterSheet)
     }
+    
+    const fetchPost = (characterSheet) => {
+    fetch('http://localhost:4000/finishedCharacterSheet', {
+    method: "POST",
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(characterSheet)
+})
+.then(response =>  response.json())
+.then(data => console.log(data))
+}
 
 
 
@@ -154,8 +162,8 @@ return (
         <button>Back</button>
     </NavLink>
     <NavLink to="">          
-    </NavLink>
     <button onClick={saveCharacterSheet}>Save Character Sheet</button>
+    </NavLink>
     </>
 )
 

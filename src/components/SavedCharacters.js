@@ -1,12 +1,92 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { NavLink } from "react-router-dom";
 
 function SavedCharacters() {
+    const [savedChar, setSavedChar] = useState([])
+    
+    useEffect(() => {
+        fetch('http://localhost:4000/finishedCharacterSheet')
+        .then(response => response.json())
+        .then(json => setSavedChar(json))
+    }, [])
+   
+    const renderCards = () => {
+        return  (
+            savedChar.map(each => {
+                return (
+                    <div className="col-sm-3" key={each.id}>
+                        <div className="card">
+                        <img src={each.image} className="card-img-top" alt="Placekitten" />
+                        <div className="card-body">
+                            <h5 className="card-title">{each.name}</h5>
+                            <a href="#" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#character-sheet-1">Show Details</a>
+                        </div>
+                        </div>
+                        <div class="modal fade" id="character-sheet-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Orc Man</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <ul className="list-unstyled">
+                                    <li><h3>Character Bio</h3></li>
+                                    <ul>
+                                    <li>Player Name: {each.player}</li>
+                                    <li>Character Name: {each.name}</li>
+                                    <li>Class: {each.class}</li>
+                                    <li>Race: {each.race}</li>
+                                    <li>Level: {each.level}</li>
+                                    <li>Experience Points: {each.experience}</li>
+                                    <li>Alignment: {each.alignment}</li>
+                                    <li>Background: {each.background}</li>
+                                    </ul>
+                                    <li><h3>Equipment</h3></li>
+                                    <ul>
+                                    {each.equipment.map(each => <li>{(each)}</li>)}
+                                    <li>Money: {each.gold} gold, {each.silver} silver, {each.copper} copper </li>
+                                    <li>Other Items: {each.otherItems}</li>
+                                    </ul>
+                                    <li><h3>Stats</h3></li>
+                                    <ul>
+                                    <li>Strength: {each.str} | Saving Throw: {each.strMod}</li> 
+                                    <li>Dexterity: {each.dex} | Saving Throw: {each.dexMod}</li>
+                                    <li>Constitution: {each.con} | Saving Throw: {each.conMod}</li>
+                                    <li>Intelligence: {each.int} | Saving Throw: {each.intMod}</li>
+                                    <li>Wisdom: {each.wis} | Saving Throw: {each.wisMod}</li>
+                                    <li>Charisma: {each.cha} | Saving Throw: {each.chaMod}</li>
+                                    </ul>
+                                    <li><h3>Spells</h3></li>
+                                    <ul>
+                                    {each.spells.map(each => <li>{(each.value)}</li>)}
+                                    </ul>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                )
+
+            }
+        )
+    )}
+   
     return (
         <div>
-            saved characters
+            <h1>saved characters</h1>
 
-            <NavLink to="">
+            <div className="container">
+                <div className="row gap-5">
+                    {renderCards()}
+                </div>
+            </div>
+
+            <NavLink to="/">
                 <button>Back Home</button>
             </NavLink>
         </div>
