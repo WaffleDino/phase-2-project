@@ -22,10 +22,58 @@
       "player": "another example",
       "id": 2
     }
-
-
   ],
   "finishedCharacterSheet": [
-    
+    {
+      "name": "orc man",
+      "class": "Barbarian",
+      "level": "1",
+      "race": "Dragonborn",
+      "alignment": "chaotic good",
+      "background": "background test",
+      "experience": "1",
+      "image": "hhhh",
+      "player": "connor ",
+      "equipment": [
+        [
+          "Abacus",
+          "Alms box",
+          "Backpack"
+        ]
+      ],
+      "gold": "1",
+      "silver": "1",
+      "copper": "1",
+      "other": "rope",
+      "str": "1",
+      "dex": "1",
+      "con": "1",
+      "int": "1",
+      "wis": "1",
+      "cha": "1",
+      "strmod": "1",
+      "dexmod": "1",
+      "conmod": "1",
+      "intmod": "1",
+      "wismod": "1",
+      "chamod": "1",
+      "spells": [
+        [
+          {
+            "value": "Acid Arrow",
+            "label": "Acid Arrow"
+          },
+          {
+            "value": "Aid",
+            "label": "Aid"
+          },
+          {
+            "value": "Antilife Shell",
+            "label": "Antilife Shell"
+          }
+        ]
+      ],
+      "id": 3
+    }
   ]
 }
