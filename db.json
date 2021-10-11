@@ -25,24 +25,71 @@
   ],
   "finishedCharacterSheet": [
     {
-      "name": "orc man",
-      "class": "Barbarian",
+      "name": "Jesse",
+      "class": "Paladin",
       "level": "1",
-      "race": "Dragonborn",
-      "alignment": "chaotic good",
-      "background": "background test",
-      "experience": "1",
-      "image": "hhhh",
-      "player": "connor ",
+      "race": "Human",
+      "alignment": "lawful good",
+      "background": "Honest",
+      "experience": 0,
+      "image": "https://i.imgur.com/JG9ihvA.jpeg",
+      "player": "Jesse",
       "equipment": [
-        "Abacus",
-        "Alms box",
+        "Backpack",
+        "Amulet",
+        "Shield",
+        "Rapier"
+      ],
+      "gold": "10",
+      "silver": "10",
+      "copper": "10",
+      "other": "",
+      "str": "18",
+      "dex": "14",
+      "con": "14",
+      "int": "14",
+      "wis": "12",
+      "cha": "12",
+      "strmod": "4",
+      "dexmod": "2",
+      "conmod": "2",
+      "intmod": "2",
+      "wismod": "1",
+      "chamod": "1",
+      "spells": [
+        {
+          "value": "Animal Friendship",
+          "label": "Animal Friendship"
+        },
+        {
+          "value": "Animate Dead",
+          "label": "Animate Dead"
+        },
+        {
+          "value": "Beacon of Hope",
+          "label": "Beacon of Hope"
+        }
+      ],
+      "id": 6
+    },
+    {
+      "name": "Jesse",
+      "class": "Bard",
+      "level": "15",
+      "race": "Elf",
+      "alignment": "lawful good",
+      "background": "Honest",
+      "experience": 0,
+      "image": "",
+      "player": "Jesse",
+      "equipment": [
+        "Amulet",
         "Backpack"
       ],
-      "gold": "1",
+      "gold": "10",
       "silver": "1",
       "copper": "1",
-      "other": "rope",
+      "other": "",
       "str": "1",
       "dex": "1",
       "con": "1",
@@ -57,103 +104,59 @@
       "chamod": "1",
       "spells": [
         {
-          "value": "Acid Arrow",
-          "label": "Acid Arrow"
-        },
-        {
           "value": "Aid",
           "label": "Aid"
-        },
-        {
-          "value": "Antilife Shell",
-          "label": "Antilife Shell"
         }
       ],
-      "id": 3
+      "id": 7
     },
     {
-      "name": "orc man 2",
-      "class": "Barbarian",
-      "level": "0",
-      "race": "Dwarf",
-      "alignment": "neutral good",
-      "background": "1",
-      "experience": "01",
-      "image": "https://static.wikia.nocookie.net/wowwiki/images/1/1e/3D-Orc.png/revision/latest/top-crop/width/360/height/450?cb=20090804213114",
-      "player": "connor ",
+      "name": "Jesse",
+      "class": "Paladin",
+      "level": "2",
+      "race": "Human",
+      "alignment": "lawful neutral",
+      "background": "Honest",
+      "experience": "1000",
+      "image": "https://i.imgur.com/JG9ihvA.jpeg",
+      "player": "Jesse",
       "equipment": [
-        "Acid (vial)",
-        "Dice Set",
-        "Crowbar"
+        "Backpack",
+        "Amulet",
+        "Shield",
+        "Rapier"
       ],
-      "gold": "2",
-      "silver": "2",
-      "copper": "2",
-      "other": "more rope",
-      "str": "2",
-      "dex": "2",
-      "con": "2",
-      "int": "2",
-      "wis": "2",
-      "cha": "2",
-      "strmod": "2",
+      "gold": "10",
+      "silver": "10",
+      "copper": "10",
+      "other": "",
+      "str": "18",
+      "dex": "14",
+      "con": "14",
+      "int": "14",
+      "wis": "12",
+      "cha": "12",
+      "strmod": "4",
       "dexmod": "2",
       "conmod": "2",
       "intmod": "2",
-      "wismod": "2",
-      "chamod": "2",
+      "wismod": "1",
+      "chamod": "1",
       "spells": [
         {
-          "value": "Calm Emotions",
-          "label": "Calm Emotions"
+          "value": "Alarm",
+          "label": "Alarm"
         },
         {
-          "value": "Clone",
-          "label": "Clone"
+          "value": "Beacon of Hope",
+          "label": "Beacon of Hope"
         },
         {
-          "value": "Branding Smite",
-          "label": "Branding Smite"
+          "value": "Cure Wounds",
+          "label": "Cure Wounds"
         }
       ],
-      "id": 4
-    },
-    {
-      "name": "orc man3",
-      "class": "",
-      "level": "",
-      "race": "",
-      "alignment": "",
-      "background": "",
-      "experience": 0,
-      "image": "https://via.placeholder.com/300/09f/fff.png",
-      "player": "",
-      "equipment": [
-        "Acid (vial)"
-      ],
-      "gold": "3",
-      "silver": "3",
-      "copper": "3",
-      "other": "2222",
-      "str": "3",
-      "dex": "3",
-      "con": "3",
-      "int": "3",
-      "wis": "3",
-      "cha": "3",
-      "strmod": "3",
-      "dexmod": "3",
-      "conmod": "3",
-      "intmod": "3",
-      "wismod": "3",
-      "chamod": "3",
-      "spells": [
-        {
-          "value": "Aid",
-          "label": "Aid"
-        }
-      ],
-      "id": 5
+      "id": 8
     }
   ]
 }

@@ -17,18 +17,18 @@ function SavedCharacters() {
                     <div className="col-sm-3" key={each.id}>
                         <div className="card">
                         <img src={each.image} className="card-img-top" alt="Placekitten" />
-                        <div className="card-body">
+                        {/* <div className="card-body">
                             <h5 className="card-title">{each.name}</h5>
-                            <a href="#" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#character-sheet-1">Show Details</a>
+                            <a href="#" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#character-sheet-1" >Show Details</a>
                         </div>
                         </div>
                         <div class="modal fade" id="character-sheet-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Orc Man</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">{each.player}</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
+                            </div> */}
                             <div class="modal-body">
                                 <ul className="list-unstyled">
                                     <li><h3>Character Bio</h3></li>
@@ -89,8 +89,8 @@ function SavedCharacters() {
                             </div>
                             </div>
                         </div>
-                        </div>
-                    </div>
+                //         </div>
+                //     </div>
                 )
 
             }
